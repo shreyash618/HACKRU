@@ -1,28 +1,26 @@
 import json
 
 # reads the json file
-# (open(*THIS*)) has to be replaced with the restaurant that the user is looking for 
-with open('CheesecakeFactory.json') as f:
+with open('TCF_KWT_Allergen Data.csv3.json') as f:
     data = json.load(f)
 
-#replace the user input into "desired value"
+# Nested for loop with if statement to search menu for item and return ingredients
+def search_food(data, target):
+    for category in data["menu"]:
+        for item in category["items"]:
+            if item["name"] == target:
+                return item["ingredients"]
+    return None
+
+
+# Replace the user input with the desired food item
 food_item = 'Avocado Eggrolls'
 
-# Function to recursively search for a value in a nested dictionary
-def search_value(data, target):
-    for key, value in data.items():
-        if isinstance(value, dict):
-            result = search_value(value, target)
-            if result is not None:
-                return result
-        elif value == target:
-            return key  # or return any other information you need
-
-# Search for the target value in the loaded JSON data
-result = search_value(data, food_item)
+# Search for the target food item in the loaded JSON data
+result = search_food(data, food_item)
 
 # Print the result
 if result is not None:
-    print(f"Found '{food_item}' in key: {result}")
+    print(f"Found '{food_item}' and has allergens: {result}")
 else:
     print(f"'{food_item}' not found in the JSON data")
