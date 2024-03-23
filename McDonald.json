@@ -1,0 +1,51 @@
+{
+  "restaurant": "McDonald's",
+  "menu": [
+    {
+      "category": "Burgers",
+      "items": [
+        {
+          "name": "Big Mac",
+          "description": "Two all-beef patties, special sauce, lettuce, cheese, pickles, onions on a sesame seed bun.",
+          "ingredients": ["Beef Patty", "Special Sauce", "Lettuce", "Cheese", "Pickles", "Onions", "Sesame Seed Bun"]
+        },
+        {
+          "name": "Quarter Pounder with Cheese",
+          "description": "Quarter pound 100% beef patty, with two slices of melty American cheese, pickles, onions, ketchup, and mustard on a toasted bun.",
+          "ingredients": ["Beef Patty", "American Cheese", "Pickles", "Onions", "Ketchup", "Mustard", "Toasted Bun"]
+        },
+        {
+          "name": "McChicken",
+          "description": "A tender, juicy chicken patty, crispy lettuce, mayonnaise, and our famous sandwich bun.",
+          "ingredients": ["Chicken Patty", "Lettuce", "Mayonnaise", "Bun"]
+        }
+      ]
+    },
+    {
+      "category": "Sides",
+      "items": [
+        {
+          "name": "French Fries",
+          "description": "Golden fries made from whole potatoes."
+        },
+        {
+          "name": "Apple Slices",
+          "description": "Fresh, juicy apple slices."
+        }
+      ]
+    },
+    {
+      "category": "Desserts",
+      "items": [
+        {
+          "name": "McFlurry",
+          "description": "Creamy vanilla soft serve blended with your choice of mix-ins."
+        },
+        {
+          "name": "Apple Pie",
+          "description": "Warm, flaky crust with delicious apple filling."
+        }
+      ]
+    }
+  ]
+}

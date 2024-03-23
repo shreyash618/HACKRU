@@ -1,0 +1,121 @@
+{
+    "restaurant": "The Cheesecake Factory",
+    "menu": [
+      {
+        "category": "Appetizers",
+        "items": [
+          {
+            "name": "Avocado Eggrolls",
+            "description": "Avocado, Sun-Dried Tomato, Red Onion and Cilantro Fried in a Crisp Wrapper. Served with a Tamarind-Cashew Dipping Sauce.",
+            "ingredients": [
+              "Avocado",
+              "Sun-Dried Tomato",
+              "Red Onion",
+              "Cilantro",
+              "Crisp Wrapper",
+              "Tamarind-Cashew Dipping Sauce"
+            ]
+          },
+          {
+            "name": "Buffalo Blasts",
+            "description": "Chicken, Cheese and Our Spicy Buffalo Sauce all Stuffed in a Spiced Wrapper and Fried until Crisp. Served with Celery Sticks and Blue Cheese Dressing.",
+            "ingredients": [
+              "Chicken",
+              "Cheese",
+              "Spicy Buffalo Sauce",
+              "Spiced Wrapper",
+              "Celery Sticks",
+              "Blue Cheese Dressing"
+            ]
+          },
+          {
+            "name": "Fried Macaroni and Cheese",
+            "description": "Crispy Crumb Coated Macaroni and Cheese Balls. Served over a Creamy Marinara Sauce.",
+            "ingredients": [
+              "Macaroni",
+              "Cheese",
+              "Crumb Coating",
+              "Creamy Marinara Sauce"
+            ]
+          }
+        ]
+      },
+      {
+        "category": "Entrees",
+        "items": [
+          {
+            "name": "Factory Burger",
+            "description": "Charbroiled with Cheddar Cheese, Tomato, Pickles and Onion. Served on a Toasted Bun.",
+            "ingredients": [
+              "Beef Patty",
+              "Cheddar Cheese",
+              "Tomato",
+              "Pickles",
+              "Onion",
+              "Toasted Bun"
+            ]
+          },
+          {
+            "name": "Eggplant Parmesan",
+            "description": "Panko Crusted Eggplant Served Over Spaghetti with Marinara Sauce and Mozzarella.",
+            "ingredients": [
+              "Eggplant",
+              "Panko Crumbs",
+              "Spaghetti",
+              "Marinara Sauce",
+              "Mozzarella"
+            ]
+          },
+          {
+            "name": "Chicken Madeira",
+            "description": "Sauteed Chicken Breast Topped with Fresh Asparagus and Melted Mozzarella Cheese. Covered with Fresh Mushroom Madeira Sauce and Served with Mashed Potatoes.",
+            "ingredients": [
+              "Chicken Breast",
+              "Asparagus",
+              "Mozzarella Cheese",
+              "Mushroom Madeira Sauce",
+              "Mashed Potatoes"
+            ]
+          }
+        ]
+      },
+      {
+        "category": "Desserts",
+        "items": [
+          {
+            "name": "Original Cheesecake",
+            "description": "The one that started it all! Our famous creamy cheesecake with a graham cracker crust and sour cream topping.",
+            "ingredients": [
+              "Cream Cheese",
+              "Sugar",
+              "Eggs",
+              "Sour Cream",
+              "Graham Cracker Crust"
+            ]
+          },
+          {
+            "name": "Chocolate Tuxedo Cream® Cheesecake",
+            "description": "Layers of Our Fudge Cake, Chocolate Cheesecake, Vanilla Mascarpone Mousse and Chocolate.",
+            "ingredients": [
+              "Fudge Cake",
+              "Chocolate Cheesecake",
+              "Vanilla Mascarpone Mousse",
+              "Chocolate"
+            ]
+          },
+          {
+            "name": "Fresh Strawberry Cheesecake",
+            "description": "The Original Topped with Glazed Fresh Strawberries. Our Most Popular Flavor for Over 35 Years!",
+            "ingredients": [
+              "Cream Cheese",
+              "Sugar",
+              "Eggs",
+              "Sour Cream",
+              "Graham Cracker Crust",
+              "Fresh Strawberries"
+            ]
+          }
+        ]
+      }
+    ]
+  }

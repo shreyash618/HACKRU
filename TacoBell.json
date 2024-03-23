@@ -1,0 +1,53 @@
+{
+    "restaurant": "KFC",
+    "menu": [
+      {
+        "category": "Chicken",
+        "items": [
+          {
+            "name": "Original Recipe Chicken",
+            "description": "Our Original Recipe Chicken is hand-breaded, freshly prepared and seasoned with a secret blend of 11 herbs and spices.",
+            "ingredients": ["Chicken", "Flour", "Salt", "Pepper", "Spices"]
+          },
+          {
+            "name": "Extra Crispy Chicken",
+            "description": "Extra Crispy Chicken is double breaded for a extra crispy crunch. It’s juicy and perfectly seasoned with our signature blend of 11 herbs and spices.",
+            "ingredients": ["Chicken", "Flour", "Salt", "Pepper", "Spices"]
+          },
+          {
+            "name": "Nashville Hot Chicken",
+            "description": "Our Nashville Hot Chicken starts with a signature blend of 11 herbs and spices, fried hot and golden, then drizzled with a spicy sauce and topped with pickles on a toasted bun.",
+            "ingredients": ["Chicken", "Flour", "Salt", "Pepper", "Spices", "Hot Sauce", "Pickles", "Bun"]
+          }
+        ]
+      },
+      {
+        "category": "Sides",
+        "items": [
+          {
+            "name": "Mashed Potatoes",
+            "description": "Creamy mashed potatoes, seasoned with our signature blend of spices."
+          },
+          {
+            "name": "Cole Slaw",
+            "description": "Crunchy coleslaw made with fresh cabbage and carrots, dressed with a tangy dressing."
+          }
+        ]
+      },
+      {
+        "category": "Desserts",
+        "items": [
+          {
+            "name": "Chocolate Chip Cookie",
+            "description": "Soft, chewy chocolate chip cookie made with real chocolate chips."
+          },
+          {
+            "name": "Famous Bowl",
+            "description": "Mashed potatoes, sweet corn, crispy chicken, and gravy topped with cheese.",
+            "ingredients": ["Mashed Potatoes", "Sweet Corn", "Crispy Chicken", "Gravy", "Cheese"]
+          }
+        ]
+      }
+    ]
+  }
+  
