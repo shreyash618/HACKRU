@@ -14,6 +14,8 @@ function App() {
 
   //URL to fetch data from
   const url = 'https://raw.githubusercontent.com/clux/food/master/ingredients.json';
+  //URL to post data to (for queries)
+  const post_url = 'https://jsonplaceholder.typicode.com/posts';
   //fetch ingredients data from URL
   function getIngredientsList (){
     console.log ("Running function!");
@@ -25,8 +27,24 @@ function App() {
       console.error ('Error fetching data: ', error);
     })
   }
-  //function call
+  //function call to get the ingredients list
   getIngredientsList();
+
+  const postData = {
+    key1: "Shreya",
+    key2: "Shukla"
+  }
+
+  function postAllergens (){
+    axios.post (post_url, postData)
+    .then (response =>{
+      console.log ("Response ", response.data);
+    })
+    .catch (error =>{
+      console.log ('Error posting data: ', error);
+    })
+  }
+  postAllergens()
   return (
   <div>
       <h1>Allergen Detector</h1>
