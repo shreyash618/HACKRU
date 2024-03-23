@@ -1,26 +1,40 @@
 import json
 
 # reads the json file
-with open('TCF_KWT_Allergen Data.csv3.json') as f:
+with open('CheesecakeFactory.json') as f:
     data = json.load(f)
 
-# Nested for loop with if statement to search menu for item and return ingredients
+# Nested for loop with if statement to search menu for item and return allergens
+#currently only does ingredients, need the proper file for allergens
 def search_food(data, target):
     for category in data["menu"]:
         for item in category["items"]:
             if item["name"] == target:
                 return item["ingredients"]
     return None
+# Nested for loop to search allergens across the whole menu and return the food items 
+def search_allergen(data, target2):
+    for category2 in data["menu"]:
+        for foodItems in category2["items"]:
+            for allergens in foodItems["ingredients"]
+            return allergen["allergens"]
+    return None
 
+food = input("Food item: ")
+allergen = input("Allergen: ")
 
-# Replace the user input with the desired food item
-food_item = 'Avocado Eggrolls'
-
+#Use the user input as the desired food item
 # Search for the target food item in the loaded JSON data
-result = search_food(data, food_item)
+foodResult = search_food(data, food)
+allergenResult = search_allergen(data, allergen)
 
 # Print the result
-if result is not None:
-    print(f"Found '{food_item}' and has allergens: {result}")
+if foodResult is not None:
+    print(f"{food} has allergens: {foodResult}")
 else:
-    print(f"'{food_item}' not found in the JSON data")
+    print(f"'{food}' not found")
+
+if allergenResult is not None:
+    print(f"{allergen} is present in the following foodsAvoca: {allergenResult}")
+else:
+    print(f"'{allergen}' not found")
