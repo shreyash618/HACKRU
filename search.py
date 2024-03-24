@@ -10,18 +10,18 @@ def search_food(data, target):
     for category in data["menu"]:
         for item in category["items"]:
             if item["name"] == target:
-                return item["ingredients"]
+                return item["allergens"]
     return None
 # Nested for loop to search allergens across the whole menu and return the food items 
 def search_allergen(data, target2):
-    for category2 in data["menu"]:
+    for caKtegory2 in data["menu"]:
         for foodItems in category2["items"]:
-            for allergens in foodItems["ingredients"]
-            return allergen["allergens"]
+                if foodItems["allergens"]==target2:
+                    return foodItems["name"]
     return None
 
-food = input("Food item: ")
-allergen = input("Allergen: ")
+food = input("Food item: " )
+allergen = input("Allergen: " )
 
 #Use the user input as the desired food item
 # Search for the target food item in the loaded JSON data
