@@ -1,7 +1,8 @@
 import logo from './logo.svg';
-import './App.css';
+//import './App.css';
 import React, { useState, useEffect, useCallback, useRef } from 'react';
 import axios from 'axios';
+import './input.css';
 
 function App() {
   //strings to hold the the food item and restaurant name
@@ -90,13 +91,26 @@ function App() {
   //returns all the items without the specified allergen(s)
 
   return (
+  <div className="font-mono min-h-screen bg-gradient-to-r from-pink-200 via-purple-200 to-blue-200">
+    <nav class="bg-blue-500 p-4">
+    <div class="container mx-auto flex justify-between items-center">
+    <h1 class="text-3xl font-semibold text-white">Allergen Detector</h1>
+    <ul class="flex space-x-4">
+    <li><a href="#" class="text-white hover:text-blue-200">Home</a></li>
+    <li><a href="#" class="text-white hover:text-blue-200">About</a></li>
+    <li><a href="#" class="text-white hover:text-blue-200">Services</a></li>
+    <li><a href="#" class="text-white hover:text-blue-200">Contact</a></li>
+    </ul>
+    </div>
+</nav>
   <div>
-      <h1>Allergen Detector</h1>
-      <h2>STEP 1: List Your Allergies</h2>
+      {/*-----------STEP 1: List Your Allergies--------*/}
+      <br></br>
+      <label className="text-l font-semibold mb-4" for = "allergenFilter">List Your Allergies:</label>
+      <br></br>
       <label for = "allergens">Make sure to choose all ingredients you're allergic to or can't eat</label>
-      <label for = "allergenFilter">Select Allergen(s):</label>
 
-    <select id="allergenFilter" multiple>
+    <select className="block mb-2" id="allergenFilter" multiple>
         <option value="Gluten">Gluten</option>
         <option value="Crustaceas">Crustaceas</option>
         <option value="Eggs">Eggs</option>
@@ -127,39 +141,40 @@ function App() {
         <option value="Soy">Soy</option>
         <option value="Sulphites">Sulphites</option>
     </select>
-    <button onClick={updateAllergens}>Submit allergens.</button>
+    <button onClick={updateAllergens}>Submit</button>
+    </div>
+    <div>
       <h2>STEP 2: Find Food Items Without Allergen</h2>
       <div>
-        <h8>List all the ingredients of a food item and identify which ingredients you're allergic to</h8>
+        <h6>List all the ingredients of a food item and identify which ingredients you're allergic to</h6>
         <input id = "item_input" type="text" placeholder="Search item..." />
         <input id = "rest_input" type="text" placeholder="Choose restaurant..." />
         <button id="item_rest">Submit</button>
       </div>
       <div>
-        <h8>OR filter all the menu itmes that don't have the specific allergens</h8>
+        <h6>OR filter all the menu itmes that don't have the specific allergens</h6>
         <button id="all-items" onClick={displayFoodList}>Submit</button>
         <h6>{food}</h6>
-        <div>
-        </div>
       </div>
-      <div className="ingredient-box">
-        <h3>Ingredients</h3>
-        <ul className="ingredients-list">
-          <li>Ingredient 1</li>
-          <li>Ingredient 2</li>
-          {/* Add more allergens as needed */}
-        </ul>
-        <pre>{JSON.stringify(ingredients, null, 2)}</pre>
-      </div>
-      <div className="ingredients-box">
+    </div>
+    <div>
+      <h3>Ingredients</h3>
+      <ul>
+        <li>Ingredient 1</li>
+        <li>Ingredient 2</li>
+        {/* Add more allergens as needed */}
+      </ul>
+      <pre>{JSON.stringify(ingredients, null, 2)}</pre>
+    </div>
+    <div>
         <h2>Allergens identified:</h2>
-        <ul className="allergen-list">
+        <ul>
           <li>Allergen 1</li>
           <li>Allergen 2</li>
           {/* Add more allergens as needed */}
         </ul>
-      </div>
     </div>    
+  </div>
   );
 }
 
