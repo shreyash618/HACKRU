@@ -12,6 +12,7 @@ function App() {
   const[ingredients, setIngredients] = useState ([{}]);
   //arrays to hold as the allergens
   const[allergens, setAllergens] = useState ([{}]);
+  const[food, setFood] = useState (['']);
 
   //URL to fetch data from
   const url = 'https://raw.githubusercontent.com/clux/food/master/ingredients.json';
@@ -50,6 +51,43 @@ function App() {
     })
   }
   postAllergens();
+
+  //returns the ingredients and allergens of a particular item from a specified restaurant
+  function postItem_Rest (){
+    const item_name = document.getElementById("item_input");
+    const rest_name = document.getElementById("rest_input");
+    
+    if (item_name && rest_name){
+      axios.post (post_url,
+        {
+          item: item_name,
+          restaurant: rest_name
+        }).then (response =>{
+          console.log ("Response ", response.data);
+        }).catch (error => {
+          console.log ("Error ", error);
+        })
+    }
+
+  }
+
+  function getFoodList (){
+    console.log ("Running function!");
+    /*
+    axios.get(url).then(response => {
+      console.log('Got the URL! Dumping all the edible foods in console.log', response.data);
+      setFood(response.data.ingredients);
+    })
+    .catch(error => {
+      console.error ('Error fetching data: ', error);
+    })
+    */
+   setFood (['Coconut Pie', 'Apple Pie', 'Pineapple Pie']);
+   console.log("Here's all the food items you can eat at the specified restaurant:", food);
+  }
+
+  //returns all the items without the specified allergen(s)
+
   return (
   <div>
       <h1>Allergen Detector</h1>
@@ -92,14 +130,15 @@ function App() {
       <h2>STEP 2: Find Food Items Without Allergen</h2>
       <div>
         <h8>List all the ingredients of a food item and identify which ingredients you're allergic to</h8>
-        <input type="text" placeholder="Search item..." />
-        <input type="text" placeholder="Choose restaurant..." />
-        <button>Submit</button>
+        <input id = "item_input" type="text" placeholder="Search item..." />
+        <input id = "rest_input" type="text" placeholder="Choose restaurant..." />
+        <button id="item_rest">Submit</button>
       </div>
       <div>
-        <h8>OR filter all the menu itmes that don't have a specific ingredient</h8>
-        <input type="text" placeholder="Food Items without a specific ingredient" />
-        <button>Submit</button>
+        <h8>OR filter all the menu itmes that don't have the specific allergens</h8>
+        <button id="all-items" onClick={getFoodList}>Submit</button>
+        <div>
+        </div>
       </div>
       <div className="ingredient-box">
         <h3>Ingredients</h3>
