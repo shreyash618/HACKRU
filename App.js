@@ -8,8 +8,9 @@ function App() {
   const [item, setItem] = useState ('');
   const [restaurant, setRestaurant] = useState ('');
 
-  //arrays to hold the ingredients as well as the allergens
+  //arrays to hold the ingredients
   const[ingredients, setIngredients] = useState ([{}]);
+  //arrays to hold as the allergens
   const[allergens, setAllergens] = useState ([{}]);
 
   //URL to fetch data from
@@ -20,7 +21,7 @@ function App() {
   function getIngredientsList (){
     console.log ("Running function!");
     axios.get(url).then(response => {
-      console.log('Got the URL!', response.data);
+      console.log('Got the URL! Dumping all the ingredients in console.log', response.data);
       setIngredients(response.data.ingredients);
     })
     .catch(error => {
@@ -30,13 +31,17 @@ function App() {
   //function call to get the ingredients list
   getIngredientsList();
 
-  const postData = {
-    key1: "Shreya",
-    key2: "Shukla"
+  function updateAllergens(){
+    const element = document.getElementById("allergenFilter");
+    if (element){
+      setAllergens(Array.from(element.selectedOptions).map(option => option.value));
+      console.log ("updating Allergens!");
+      console.log (allergens);
+    }
   }
 
   function postAllergens (){
-    axios.post (post_url, postData)
+    axios.post (post_url, allergens)
     .then (response =>{
       console.log ("Response ", response.data);
     })
@@ -44,17 +49,46 @@ function App() {
       console.log ('Error posting data: ', error);
     })
   }
-  postAllergens()
+  postAllergens();
   return (
   <div>
       <h1>Allergen Detector</h1>
       <h2>STEP 1: List Your Allergies</h2>
-      <label for = "allergens">Choose all ingredients you're allergic to or can't eat</label>
-      <select name = "allergens" id = "allergens">
-        <option value = "milk">Milk</option>
-        <option value ="eggs">Eggs</option>
-        <option value ="pinenuts">Pinenuts</option>
-      </select>
+      <label for = "allergens">Make sure to choose all ingredients you're allergic to or can't eat</label>
+      <label for = "allergenFilter">Select Allergen(s):</label>
+
+    <select id="allergenFilter" multiple>
+        <option value="Gluten">Gluten</option>
+        <option value="Crustaceas">Crustaceas</option>
+        <option value="Eggs">Eggs</option>
+        <option value="Fish">Fish</option>
+        <option value="Milk">Milk</option>
+        <option value="Peanuts">Peanuts</option>
+        <option value="Shellfish">Shellfish</option>
+        <option value="Soybeans">Soybeans</option>
+        <option value="Tree nuts">Tree nuts</option>
+        <option value="Wheat">Wheat</option>
+        <option value="Almonds">Almonds</option>
+        <option value="Cashews">Cashews</option>
+        <option value="Walnuts">Walnuts</option>
+        <option value="Pecans">Pecans</option>
+        <option value="Pistachios">Pistachios</option>
+        <option value="Hazelnuts">Hazelnuts</option>
+        <option value="Brazil nuts">Brazil nuts</option>
+        <option value="Macadamia nuts">Macadamia nuts</option>
+        <option value="Pine nuts">Pine nuts</option>
+        <option value="Chestnuts">Chestnuts</option>
+        <option value="Sesame seeds">Sesame seeds</option>
+        <option value="Sulfites">Sulfites</option>
+        <option value="Mustard">Mustard</option>
+        <option value="Celery">Celery</option>
+        <option value="Lupin">Lupin</option>
+        <option value="Mollusks">Mollusks</option>
+        <option value="Sesame">Sesame</option>
+        <option value="Soy">Soy</option>
+        <option value="Sulphites">Sulphites</option>
+    </select>
+    <button onClick={updateAllergens}>Submit allergens.</button>
       <h2>STEP 2: Find Food Items Without Allergen</h2>
       <div>
         <h8>List all the ingredients of a food item and identify which ingredients you're allergic to</h8>
