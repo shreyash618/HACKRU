@@ -12,7 +12,7 @@ function App() {
   const[ingredients, setIngredients] = useState ([{}]);
   //arrays to hold as the allergens
   const[allergens, setAllergens] = useState ([{}]);
-  const[food, setFood] = useState (['']);
+  const[food, setFood] = useState ('');
 
   //URL to fetch data from
   const url = 'https://raw.githubusercontent.com/clux/food/master/ingredients.json';
@@ -71,7 +71,7 @@ function App() {
 
   }
 
-  function getFoodList (){
+  function displayFoodList (){
     console.log ("Running function!");
     /*
     axios.get(url).then(response => {
@@ -82,7 +82,8 @@ function App() {
       console.error ('Error fetching data: ', error);
     })
     */
-   setFood (['Coconut Pie', 'Apple Pie', 'Pineapple Pie']);
+   setFood (JSON.stringify(['Coconut Pie', 'Apple Pie', 'Pineapple Pie'], null, 2));
+
    console.log("Here's all the food items you can eat at the specified restaurant:", food);
   }
 
@@ -136,7 +137,8 @@ function App() {
       </div>
       <div>
         <h8>OR filter all the menu itmes that don't have the specific allergens</h8>
-        <button id="all-items" onClick={getFoodList}>Submit</button>
+        <button id="all-items" onClick={displayFoodList}>Submit</button>
+        <h6>{food}</h6>
         <div>
         </div>
       </div>
