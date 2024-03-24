@@ -10,23 +10,6 @@
           "name":"PINEAPPLE CHERRY LIMEADE",
           "allergens": [""]     },
  {
-   "name": "",
-   "allergens": [""] "Gluten",
-   "FIELD3": "Crustaceas",
-   "FIELD4": "Egg",
-   "FIELD5": "Fish",
-   "FIELD6": "Peanuts",
-   "Soybeans": "Soybeans",
-   "FIELD8": "Nuts",
-   "FIELD9": "Milk",
-   "name0": "Sulphites",
-   "name1": "Celery",
-   "name2": "Mustard",
-   "name3": "Sesame",
-   "name4": "Clams",
-   "name5": "Lupin"
- },
- {
    "name": "PINEAPPLE CHERRY LIMEADE",
    "allergens": ["Sulphites"]
  },
@@ -283,18 +266,7 @@
  },
  {
    "name": "BUFFALO WINGS",
-   "allergens": [""]"Egg",
-   "FIELD5": "Contains",
-   
-   "Soybeans": "Contains",
-   
-   "FIELD9": "Contains",
-   "name0": "Contains",
-   "name1": "Contains",
-   "name2": "Contains",
-   
-   
-   
+   "allergens": ["Egg","Fish","Soybeans","Milk","Sulphites","Celery","Mustard"]
  },
  {
    "name": "BUFFALO CHICKEN STRIPS",
@@ -357,13 +329,7 @@
  },
  {
    "name": "GRILLED SHRIMP",
-"allergens": ["Gluten"]   "FIELD3": "Contains",
-   
-   "FIELD5": "May Contain",
-   
-   "Soybeans": "Contains",
-   
-   "FIELD9": "Contains",
+"allergens": ["Gluten","Crustaceas","Fish","Soybeans","Milk"]
  },
  {
    "name": "GRILLED SALMON",
@@ -675,8 +641,6 @@
  {
    "name": "PASTA CARBONARA",
 "allergens": ["Egg","Gluten", "Soybeans", "Milk","Sulphites","Celery"]
-,
-   
    
    
    
@@ -691,7 +655,7 @@
  },
  {
    "name": "EVELYN'S FAVORITE PASTA",
-["Egg","Gluten", "Soybeans","Sulphites","Milk","Nuts"]
+"allergens":["Egg","Gluten", "Soybeans","Sulphites","Milk","Nuts"]
    
    
    
@@ -708,13 +672,7 @@
  },
  {
    "name": "LOUISIANA CHICKEN PASTA",
-"allergens": ["Gluten", "Egg"],
-   "FIELD5": "Contains",
-   
-   "Soybeans": "Contains",
-   
-   "FIELD9": "Contains",
-   "name0": "May Contain",
+"allergens": ["Gluten", "Egg","Soybeans","Fish","Milk","Sulphites"]
    
    
    
@@ -735,14 +693,7 @@
  },
  {
    "name": "CHICKEN PICCATA",
-"allergens": ["Gluten", "Egg"],
-   "FIELD5": "Contains",
-   
-   "Soybeans": "Contains",
-   
-   "FIELD9": "Contains",
-   "name0": "May Contain",
-   "name1": "Contains",
+"allergens": ["Gluten", "Egg","Soybeans","Fish","Milk","Sulphites","Celery"]
    
    
    
@@ -761,18 +712,7 @@
  },
  {
    "name": "HERB CRUSTED FILET OF SALMON",
-   "allergens": [""]
-   "FIELD5": "Contains",
-   
-   "Soybeans": "Contains",
-   
-   "FIELD9": "Contains",
-   "name0": "Contains",
-   "name1": "Contains",
-   "name2": "Contains",
-   
-   
-   "name5": "May Contain"
+ "allergens": ["Fish","Celery", "Soybeans","Sulphites","Milk","Mustard"]
  },
  {
    "name": "MISO SALMON",
@@ -809,9 +749,7 @@
  },
  {
    "name": "OLD FASHIONED BURGER",
-"allergens": ["Egg","Gluten", "Soybeans", "Milk", "Celery", "Mustard"]
-   "name3": "Contains",
-   
+"allergens": ["Egg","Gluten", "Soybeans", "Milk", "Celery", "Mustard", "Sesame"]   
    
  },
  {
@@ -840,10 +778,7 @@
  },
  {
    "name": "MACARONI AND CHEESE BURGER",
-"allergens": ["Egg","Gluten", "Soybeans", "Milk"]   
-   "name1": "Contains",
-   
-   "name3": "Contains",
+"allergens": ["Egg","Gluten", "Soybeans", "Milk","Celery","Sesame"]
    
    
  },
@@ -857,17 +792,11 @@
  },
  {
    "name": "SPICY CRISPY CHICKEN SANDWICH - BUFFALO SAUCE",
-"allergens": ["Gluten", "Egg"],
 "allergens": ["Gluten", "Milk", "Egg", "Fish", "Soybeans", "Sulphites", "Mustard", "Sesame"]
  },
  {
    "name": "SPICY CRISPY CHICKEN SANDWICH - CHIPOTLE MAYO",
-"allergens": ["Egg","Gluten", "Soybeans", "Milk"]   
-   
-   "name2": "Contains",
-   "name3": "Contains",
-   
-   
+"allergens": ["Egg","Gluten", "Soybeans", "Milk","Mustard","Sesame"]
  },
  {
    "name": "FACTORY TURKEY BURGER",
@@ -879,19 +808,8 @@
  },
  {
    "name": "THAI COCONUT-LIME CHICKEN",
-"allergens": ["Gluten"]   
-   
-   "FIELD5": "Contains",
-   "FIELD6": "May Contain",
-   "Soybeans": "Contains",
-   "FIELD8": "Contains",
-   "FIELD9": "Contains",
-   "name0": "Contains",
-   
-   "name2": "Contains",
-   "name3": "Contains",
-   
-   
+"allergens": ["Gluten","Fish","Soybeans","Milk","Nuts","Sulphites","Mustard","Sesame"]   
+
  },
  {
    "name": "CRISPY PINEAPPLE CHICKEN AND SHRIMP",
@@ -901,21 +819,17 @@
  },
  {
    "name": "CAULIFLOWER TACOS",
-"allergens": ["Egg","Gluten", "Soybeans", "Milk", "Peanuts","Nuts", "Sulphites"] 
-   "name1": "Contains",
-   "name2": "Contains",
-   "name3": "Contains",
+"allergens": ["Egg","Gluten", "Soybeans", "Milk", "Peanuts","Nuts", "Sulphites","Celery","Mustard","Sesame"]
    
    
  },
  {
    "name": "CHICKEN PARMESAN “PIZZA STYLE”",
-"allergens": ["Egg","Gluten", "Soybeans"]"FIELD8": "May Contain",
-   "FIELD9": "Contains",
+"allergens": ["Egg","Gluten", "Soybeans","Nuts","Milk"]
  },
  {
    "name": "TRUFFLE-HONEY CHICKEN",
-"allergens": ["Gluten"]   "FIELD9": "Contains","name5": "May Contain"
+"allergens": ["Gluten","Milk","Lupin"]
  },
  {
    "name": "CHICKEN ENCHILADAS",
@@ -926,7 +840,7 @@
  },
  {
    "name": "CAJUN CHICKEN LITTLES",
-"allergens": ["Gluten", "Egg", "Soybeans", "Milk", "Sulphites", "Celery", "Mustard", "Fish"]"name5": "May Contain"
+"allergens": ["Gluten", "Egg", "Soybeans", "Milk", "Sulphites", "Celery", "Mustard", "Fish"]
  },
  {
    "name": "SHEPHERD'S PIE",
@@ -973,12 +887,7 @@
  },
  {
    "name": "CHICKEN & BISCUITS",
-"allergens": ["Gluten", "Soybeans", "Milk"]"name0": "May Contain",
-   "name1": "Contains",
-   
-   
-   
-   "name5": "May Contain"
+"allergens": ["Gluten", "Soybeans", "Milk","Lupin","Celery","Sulphites"]
  },
  {
    "name": "CRUSTED CHICKEN ROMANO",
@@ -993,38 +902,15 @@
  },
  {
    "name": "PARMESAN-HERB CRUSTED CHICKEN",
-"allergens": ["Egg","Gluten", "Soybeans", "Milk","Sulphites","Celery"]
-,
-   
-   
-   
-   "name5": "May Contain"
+"allergens": ["Egg","Gluten", "Soybeans", "Milk","Sulphites","Celery","Lupin"]
  },
  {
    "name": "CRISPY CHICKEN COSTOLETTA",
-"allergens": ["Gluten", "Egg"],
-   "FIELD5": "Contains",
-   
-   "Soybeans": "Contains",
-   
-   "FIELD9": "Contains",
-   "name0": "May Contain",
-   "name1": "Contains",
-   
-   
-   
-   "name5": "May Contain"
+"allergens": ["Gluten", "Egg","Soybeans","Fish","Milk","Sulphites","Celery","Lupin"]
  },
  {
    "name": "CHICKEN PICCATA",
-"allergens": ["Gluten", "Egg"],
-   "FIELD5": "Contains",
-   
-   "Soybeans": "Contains",
-   
-   "FIELD9": "Contains",
-   "name0": "May Contain",
-   "name1": "Contains",
+"allergens": ["Gluten", "Egg","Soybeans","Fish","Milk","Sulphites","Celery"]
    
    
    
@@ -1045,35 +931,14 @@
  },
  {
    "name": "BANG-BANG CHICKEN AND SHRIMP",
-"allergens": ["Gluten"]   "FIELD3": "Contains",
-   
-   "FIELD5": "May Contain",
-   "FIELD6": "Contains",
-   "Soybeans": "Contains",
-   "FIELD8": "May Contain",
-   "FIELD9": "Contains",
-   "name0": "Contains",
-   
-   "name2": "Contains",
-   "name3": "Contains",
+"allergens": ["Gluten","Fish","Soybeans","Milk","Nuts","Sulphites","Mustard","Sesame","Crustaceas"]   
+
    
    
  },
  {
    "name": "CAJUN JAMBALAYA",
-"allergens": ["Gluten"]   "FIELD3": "Contains",
-   
-   "FIELD5": "Contains",
-   
-   "Soybeans": "Contains",
-   
-   "FIELD9": "Contains",
-   
-   "name1": "Contains",
-   
-   
-   "name4": "Contains",
-   
+   "allergens": ["Gluten","Fish","Soybeans","Nuts","Sulphites","Celery","Clams","Crustaceas"]  
  },
  {
    "name": "PASTA",
@@ -1097,18 +962,13 @@
  },
  {
    "name": "PASTA CARBONARA",
-"allergens": ["Egg","Gluten", "Soybeans", "Milk","Sulphites","Celery"]
-,
-   
-   
+"allergens": ["Egg","Gluten", "Soybeans", "Milk","Sulphites","Celery"] 
    
    
  },
  {
    "name": "PASTA CARBONARA WITH CHICKEN",
-"allergens": ["Egg","Gluten", "Soybeans", "Milk","Sulphites","Celery"]
-,
-   
+"allergens": ["Egg","Gluten", "Soybeans", "Milk","Sulphites","Celery"]  
    
    
    
@@ -1148,13 +1008,7 @@
  },
  {
    "name": "LOUISIANA CHICKEN PASTA",
-"allergens": ["Gluten", "Egg"],
-   "FIELD5": "Contains",
-   
-   "Soybeans": "Contains",
-   
-   "FIELD9": "Contains",
-   "name0": "May Contain",
+"allergens": ["Gluten", "Egg","Soybeans","Fish","Milk","Sulphites"]
    
    
    
@@ -1179,34 +1033,14 @@
  },
  {
    "name": "BISTRO SHRIMP PASTA",
-"allergens": ["Gluten"]   "FIELD3": "Contains",
-   "Egg",
-   "FIELD5": "Contains",
-   
-   "Soybeans": "Contains",
-   
-   "FIELD9": "Contains",
-   "name0": "May Contain",
-   "name1": "Contains",
-   
+"allergens":["Egg","Gluten", "Crustaceas", "Fish", "Soybeans","Sulphites","Milk","Celery"]
    
    
    
  },
  {
    "name": "SHRIMP WITH CAPELLINI",
-"allergens": ["Gluten"]   "FIELD3": "Contains",
-   "Egg",
-   "FIELD5": "May Contain",
-   
-   
-   
-   
-   "name0": "May Contain",
-   
-   
-   
-   
+"allergens": ["Gluten","Crustaceas","Egg","Fish","Sulphites"] 
    
  },
  {
@@ -1219,63 +1053,23 @@
  },
  {
    "name": "FRIED SHRIMP PLATTER",
-"allergens": ["Gluten"]   "FIELD3": "Contains",
-   "Egg",
-   "FIELD5": "Contains",
-   
-   "Soybeans": "Contains",
-   
-   "FIELD9": "Contains",
-   "name0": "Contains",
-   "name1": "Contains",
-   "name2": "Contains",
-   
-   
+"allergens": ["Gluten","Crustaceas","Egg","Fish","Soybeans","Milk","Sulphites","Celery","Mustard"]
    
  },
  {
    "name": "SHRIMP AND CHICKEN GUMBO",
-"allergens": ["Gluten"]   "FIELD3": "Contains",
-   
-   "FIELD5": "Contains",
-   
-   "Soybeans": "Contains",
-   
-   "FIELD9": "Contains",
-   "name0": "May Contain",
-   "name1": "Contains",
-   
-   
-   "name4": "Contains",
-   
+"allergens": ["Gluten","Crustaceas","Fish","Soybean","Milk","Sulphites","Celery","Clams"] 
  },
  {
    "name": "SHRIMP SCAMPI",
-"allergens": ["Gluten"]   "FIELD3": "Contains",
-   "Egg",
-   "FIELD5": "Contains",
-   
-   "Soybeans": "Contains",
-   
-   "FIELD9": "Contains",
-   "name0": "May Contain",
-   "name1": "Contains",
-   
+"allergens":["Egg","Gluten", "Crustaceas", "Fish", "Soybeans","Sulphites","Milk","Celery"]
    
    
    
  },
  {
    "name": "JAMAICAN BLACK PEPPER CHICKEN",
-"allergens": ["Gluten"]   
-   
-   "FIELD5": "Contains",
-   
-   "Soybeans": "Contains",
-   
-   "FIELD9": "Contains",
-   "name0": "Contains",
-   "name1": "Contains",
+"allergens": ["Gluten", "Celery","Soybeans","Fish","Milk","Sulphites"]
    
    
    
@@ -1305,18 +1099,7 @@
  },
  {
    "name": "HERB CRUSTED FILET OF SALMON",
-   "allergens": [""]
-   "FIELD5": "Contains",
-   
-   "Soybeans": "Contains",
-   
-   "FIELD9": "Contains",
-   "name0": "Contains",
-   "name1": "Contains",
-   "name2": "Contains",
-   
-   
-   "name5": "May Contain"
+ "allergens": ["Fish","Celery", "Soybeans","Sulphites","Milk","Mustard"]
  },
  {
    "name": "MISO SALMON",
@@ -1330,18 +1113,7 @@
  },
  {
    "name": "CAROLINA GRILLED SALMON",
-"allergens": ["Gluten"]   
-   
-   "FIELD5": "Contains",
-   
-   "Soybeans": "Contains",
-   
-   "FIELD9": "Contains",
-   "name0": "May Contain",
-   "name1": "Contains",
-   "name2": "Contains",
-   
-   
+"allergens": ["Gluten","Fish","Soybean","Milk","Sulphites","Celery","Mustard"]  
    
  },
  {
@@ -1358,19 +1130,7 @@
  },
  {
    "name": "STEAK DIANE AND HERB CRUSTED SALMON",
-"allergens": ["Gluten"]   
-   
-   "FIELD5": "Contains",
-   
-   "Soybeans": "Contains",
-   
-   "FIELD9": "Contains",
-   "name0": "Contains",
-   "name1": "Contains",
-   "name2": "Contains",
-   
-   
-   "name5": "May Contain"
+"allergens": ["Gluten", "Celery","Soybeans","Fish","Milk","Sulphites","Mustard","Lupin"]
  },
  {
    "name": "STEAKS",
@@ -1378,19 +1138,7 @@
  },
  {
    "name": "CARNE ASADA STEAK",
-"allergens": ["Gluten"]   
-   
-   "FIELD5": "Contains",
-   
-   "Soybeans": "Contains",
-   
-   "FIELD9": "Contains",
-   "name0": "May Contain",
-   
-   
-   
-   
-   
+"allergens": ["Gluten","Fish","Soybeans","Milk","Sulphite"]     
  },
  {
    "name": "CHARGRILLED NEW YORK STEAK",
@@ -1460,7 +1208,7 @@
  {
    "name": "MACARONI & CHEESE",
 "allergens": ["Egg","Gluten", "Soybeans","Nuts","Milk"]
- }
+ },
  {
    "name": "MASHED POTATOES",
    "allergens": ["Milk","Fish"]
@@ -1487,19 +1235,7 @@
  },
  {
    "name": "VEGAN COBB SALAD",
-"allergens": ["Gluten"]   
-   "FIELD4": "May Contain",
-   
-   "FIELD6": "May Contain",
-   "Soybeans": "Contains",
-   "FIELD8": "Contains",
-   
-   "name0": "Contains",
-   
-   "name2": "Contains",
-   
-   
-   
+"allergens": ["Gluten","Egg","Peanuts","Soybeans","Nuts","Sulphites","Celery"]   
  },
  {
    "name": "THAI CHICKEN SALAD",
@@ -1809,18 +1545,7 @@
  },
  {
    "name": "EGGS BENEDICT WITH TURKEY HAM",
-"allergens": ["Gluten", "Egg"],
-   "FIELD5": "Contains",
-   
-   "Soybeans": "Contains",
-   
-   "FIELD9": "Contains",
-   
-   "name1": "Contains",
-   
-   
-   
-   
+"allergens": ["Gluten", "Egg","Fish","Soybeans","Milk","Celery"]   
  },
  {
    "name": "FRIED CHICKEN & WAFFLES",
@@ -1828,12 +1553,7 @@
  },
  {
    "name": "FRIED CHICKEN & WAFFLES BENEDICT",
-"allergens": ["Gluten", "Egg"],
-   "FIELD5": "Contains",
-   
-   "Soybeans": "Contains",
-   
-   "FIELD9": "Contains",
+"allergens": ["Gluten", "Egg","Soybeans","Fish","Milk"]
  },
  {
    "name": "GREEN CHILAQUILES WITH SPICY CHICKEN AND EGGS",
@@ -1845,18 +1565,7 @@
  },
  {
    "name": "JAMBALAYA HASH & EGGS",
-"allergens": ["Gluten", "Egg"],
-   "FIELD5": "Contains",
-   
-   "Soybeans": "Contains",
-   "FIELD8": "May Contain",
-   "FIELD9": "Contains",
-   "name0": "Contains",
-   "name1": "Contains",
-   
-   "name3": "May Contain",
-   
-   
+"allergens": ["Gluten", "Egg","Fish","Soybeans","Nuts","Milk","Sulphites","Celery","Sesame"]
  },
  {
    "name": "KIDS' BREAKFAST PANCAKES",
