@@ -127,7 +127,7 @@
  },
  {
    "name": "KOREAN FRIED CAULIFLOWER",
-"allergens": ["Gluten", "Soybeans","Egg", "Milk", "Sulphites", "Fish", "Mustard", "Clams"]
+"allergens": ["Gluten", "Soybeans","Egg", "Milk", "Sulphites", "Fish", "Mustard", "Sesame"]
  },
  {
    "name": "CHICKEN TAQUITOS",
@@ -147,7 +147,7 @@
  },
  {
    "name": "CRISPY TEMPURA SHRIMP",
-"allergens": ["Gluten", "Egg","Soybeans", "Crustaceas", "Fish", "Sulphites", "Mustard", "Clams"]   
+"allergens": ["Gluten", "Egg","Soybeans", "Crustaceas", "Fish", "Sulphites", "Mustard", "Sesame"]   
  },
  {
    "name": "ROADSIDE SLIDERS",
@@ -754,11 +754,11 @@
  },
  {
    "name": "STUFFED CHEDDAR BURGER",
-"allergens": ["Egg","Gluten", "Soybeans", "Milk", "Sulphites", "Celery", "Mustard", "Clams"]
+"allergens": ["Egg","Gluten", "Soybeans", "Milk", "Sulphites", "Celery", "Mustard", "Sesame"]
  },
  {
    "name": "CLASSIC BURGER",
-"allergens": ["Egg","Gluten", "Soybeans", "Milk", "Sulphites", "Celery", "Mustard", "Clams"]
+"allergens": ["Egg","Gluten", "Soybeans", "Milk", "Sulphites", "Celery", "Mustard", "Sesame"]
  },
  {
    "name": "FRENCH DIP CHEESEBURGER",
@@ -770,7 +770,7 @@
  },
  {
    "name": "MUSHROOM BURGER",
-"allergens": ["Egg","Gluten", "Soybeans", "Milk", "Sulphites", "Celery", "Mustard", "Clams"]
+"allergens": ["Egg","Gluten", "Soybeans", "Milk", "Sulphites", "Celery", "Mustard", "Sesame"]
  },
  {
    "name": "AMERICANA CHEESEBURGER",
