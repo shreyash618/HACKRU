@@ -91,7 +91,7 @@ function App() {
   //returns all the items without the specified allergen(s)
 
   return (
-  <div className="font-mono min-h-screen bg-gradient-to-r from-pink-200 via-purple-200 to-blue-200">
+  <div className="center font-mono min-h-screen bg-gradient-to-r from-pink-200 via-purple-200 to-blue-200">
     <nav class="bg-blue-500 p-4">
     <div class="container mx-auto flex justify-between items-center">
     <h1 class="text-3xl font-semibold text-white">Allergen Detector</h1>
@@ -108,9 +108,9 @@ function App() {
       <br></br>
       <label className="text-l font-semibold mb-4" for = "allergenFilter">List Your Allergies:</label>
       <br></br>
-      <label for = "allergens">Make sure to choose all ingredients you're allergic to or can't eat</label>
+      <label className="block mb-2" for = "allergens">Make sure to choose all ingredients you're allergic to or can't eat</label>
 
-    <select className="block mb-2" id="allergenFilter" multiple>
+    <select className="w-1/3 text-center block mb-2" id="allergenFilter" multiple>
         <option value="Gluten">Gluten</option>
         <option value="Crustaceas">Crustaceas</option>
         <option value="Eggs">Eggs</option>
@@ -141,30 +141,26 @@ function App() {
         <option value="Soy">Soy</option>
         <option value="Sulphites">Sulphites</option>
     </select>
-    <button onClick={updateAllergens}>Submit</button>
+    <button onClick={updateAllergens} className = "bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">Submit</button>
     </div>
     <div>
-      <h2>STEP 2: Find Food Items Without Allergen</h2>
+      {/*------------STEP 2: Find Food Items Without Allergen-----------*/}
+      <h2 className="text-l font-semibold mb-4">Find Food Items Without Allergens:</h2>
       <div>
         <h6>List all the ingredients of a food item and identify which ingredients you're allergic to</h6>
         <input id = "item_input" type="text" placeholder="Search item..." />
         <input id = "rest_input" type="text" placeholder="Choose restaurant..." />
-        <button id="item_rest">Submit</button>
+        <button id="item_rest" onClick={getIngredientsList} className = "bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">Submit</button>
       </div>
       <div>
         <h6>OR filter all the menu itmes that don't have the specific allergens</h6>
-        <button id="all-items" onClick={displayFoodList}>Submit</button>
-        <h6>{food}</h6>
+        <button className = "bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded" id="all-items" onClick={displayFoodList}>Submit</button>
+        <h6>Filtered Menu Items:{food}</h6>
+        <br></br>
       </div>
     </div>
     <div>
-      <h3>Ingredients</h3>
-      <ul>
-        <li>Ingredient 1</li>
-        <li>Ingredient 2</li>
-        {/* Add more allergens as needed */}
-      </ul>
-      <pre>{JSON.stringify(ingredients, null, 2)}</pre>
+      <h6>INGREDIENTS:{JSON.stringify(ingredients, null, 2)}</h6>
     </div>
     <div>
         <h2>Allergens identified:</h2>
