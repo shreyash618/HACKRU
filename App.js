@@ -4,35 +4,40 @@ import React, { useState, useEffect, useCallback, useRef } from 'react';
 import axios from 'axios';
 import './input.css';
 
+axios.interceptors.request.use(
+  (config) => {
+    config.headers['Access-Control-Allow-Origin'] = '*';
+    config.headers['Access-Control-Allow-Methods'] = 'GET, POST, PUT, DELETE';
+    config.headers['Access-Control-Allow-Headers'] = 'Origin, X-Requested-With, Content-Type, Accept';
+    return config;
+  },
+  (error) => {
+    return Promise.reject(error);
+  }
+);
+
 function App() {
   //strings to hold the the food item and restaurant name
   const [item, setItem] = useState ('');
   const [restaurant, setRestaurant] = useState ('');
 
   //arrays to hold the ingredients
-  const[ingredients, setIngredients] = useState ([{}]);
+  //const[ingredients, setIngredients] = useState ([{}]);
   //arrays to hold as the allergens
+
   const[allergens, setAllergens] = useState ([{}]);
   const[food, setFood] = useState ('');
+  //stores a list of the allergens contained within the specified food item
+  const [foodCA, setFoodCA] = useState('');
+  //stores all the foods without the specified allergens
+  //const [allFoodsWA, setFoodsWA] = useState ([]);
 
   //URL to fetch data from
-  const url = 'https://raw.githubusercontent.com/clux/food/master/ingredients.json';
-  //URL to post data to (for queries)
-  const post_url = 'https://jsonplaceholder.typicode.com/posts';
-  //fetch ingredients data from URL
-  function getIngredientsList (){
-    console.log ("Running function!");
-    axios.get(url).then(response => {
-      console.log('Got the URL! Dumping all the ingredients in console.log', response.data);
-      setIngredients(response.data.ingredients);
-    })
-    .catch(error => {
-      console.error ('Error fetching data: ', error);
-    })
-  }
-  //function call to get the ingredients list
-  getIngredientsList();
+  const url_1= 'http://127.0.0.1:5000/food';
+  const post_url = 'http://127.0.0.1:5000/allergens';
+  const url_2 = 'http://127.0.0.1:5000/allwithout';
 
+  //updates the Allergens to match the selection
   function updateAllergens(){
     const element = document.getElementById("allergenFilter");
     if (element){
@@ -41,9 +46,9 @@ function App() {
       console.log (allergens);
     }
   }
-
+  //posts the allergens to flask app
   function postAllergens (){
-    axios.post (post_url, allergens)
+    axios.post (post_url, {allergens})
     .then (response =>{
       console.log ("Response ", response.data);
     })
@@ -54,37 +59,31 @@ function App() {
   postAllergens();
 
   //returns the ingredients and allergens of a particular item from a specified restaurant
-  function postItem_Rest (){
-    const item_name = document.getElementById("item_input");
-    const rest_name = document.getElementById("rest_input");
-    
-    if (item_name && rest_name){
-      axios.post (post_url,
-        {
-          item: item_name,
-          restaurant: rest_name
-        }).then (response =>{
+  function post_get_Food (){
+    const item_name = document.getElementById("item_input").value;
+    const rest_name = document.getElementById("rest_input").value;
+    if (item_name){
+      axios.post (url_1, {"food": item_name}).then (response =>{
+          console.log ("post_get_Food");
           console.log ("Response ", response.data);
-        }).catch (error => {
-          console.log ("Error ", error);
+          setFoodCA(response.data.food_allergens);
         })
+        .catch(error => {
+          console.log("Error ", error);
+      })
     }
-
   }
 
   function displayFoodList (){
     console.log ("Running function!");
-    /*
-    axios.get(url).then(response => {
+    axios.get(url_2, {allergens}).then(response => {
       console.log('Got the URL! Dumping all the edible foods in console.log', response.data);
-      setFood(response.data.ingredients);
+      setFood(JSON.stringify(response.data.allergen_free_foods),null,2);
     })
     .catch(error => {
       console.error ('Error fetching data: ', error);
     })
-    */
-   setFood (JSON.stringify(['Coconut Pie', 'Apple Pie', 'Pineapple Pie'], null, 2));
-
+   //setFood (JSON.stringify(['Coconut Pie', 'Apple Pie', 'Pineapple Pie'], null, 2));
    console.log("Here's all the food items you can eat at the specified restaurant:", food);
   }
 
@@ -147,10 +146,10 @@ function App() {
       {/*------------STEP 2: Find Food Items Without Allergen-----------*/}
       <h2 className="text-l font-semibold mb-4">Find Food Items Without Allergens:</h2>
       <div>
-        <h6>List all the ingredients of a food item and identify which ingredients you're allergic to</h6>
+        <h6>Choose a menu item and identify which ingredients you're allergic to</h6>
         <input id = "item_input" type="text" placeholder="Search item..." />
         <input id = "rest_input" type="text" placeholder="Choose restaurant..." />
-        <button id="item_rest" onClick={getIngredientsList} className = "bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">Submit</button>
+        <button onClick ={post_get_Food} id="item_rest" className = "bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">Submit</button>
       </div>
       <div>
         <h6>OR filter all the menu itmes that don't have the specific allergens</h6>
@@ -160,15 +159,7 @@ function App() {
       </div>
     </div>
     <div>
-      <h6>INGREDIENTS:{JSON.stringify(ingredients, null, 2)}</h6>
-    </div>
-    <div>
-        <h2>Allergens identified:</h2>
-        <ul>
-          <li>Allergen 1</li>
-          <li>Allergen 2</li>
-          {/* Add more allergens as needed */}
-        </ul>
+        <h2>Allergens identified:{foodCA}</h2>
     </div>    
   </div>
   );
