@@ -86,7 +86,7 @@ def search_food_post():
 def search_food_get():
     # Get food and allergens from the request query parameters
     global food
-    food = 'BEET AND AVOCADO SALAD' ##remove
+    ##food = 'BEET AND AVOCADO SALAD' ##remove
     #if the food is not NULL
     if food:
         #find the allergens of the specified food
@@ -100,7 +100,7 @@ def search_food_get():
 @app.route('/allwithout', methods=['GET'])
 def search_foods_without_allergens ():
     global allergens_list
-    allergens_list = ['Nuts', 'Sulphites'] ##remove
+    ##allergens_list = ['Nuts', 'Sulphites'] ##remove
     if allergens_list:
         allergen_results = []
         for allergen in allergens_list:
@@ -113,7 +113,11 @@ def search_foods_without_allergens ():
 
 @app.route('/allwithout', methods=['POST'])
 def search_foods_without_allergens_post ():
+    # Get the allergens_list from the POST request data
+    data = request.json
     global allergens_list
+    allergens_list = data.get('allergens_list', [])
+
     if allergens_list:
         allergen_results = []
         for allergen in allergens_list:
