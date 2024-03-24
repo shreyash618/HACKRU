@@ -33,9 +33,9 @@ function App() {
   //const [allFoodsWA, setFoodsWA] = useState ([]);
 
   //URL to fetch data from
-  const url_1= 'http://127.0.0.1:5000/food';
-  const post_url = 'http://127.0.0.1:5000/allergens';
-  const url_2 = 'http://127.0.0.1:5000/allwithout';
+  const url_1= 'http://localhost:5000/food';
+  const post_url = 'http://localhost:5000/allergens';
+  const url_2 = 'http://localhost:5000/allwithout';
 
   //updates the Allergens to match the selection
   function updateAllergens(){
